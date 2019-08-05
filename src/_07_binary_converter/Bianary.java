@@ -9,24 +9,30 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Bianary implements ActionListener {
-public void bianary() {
-	JFrame frame = new JFrame("Bianary Converter");
+
+	public void bianary() {
+	
 JPanel panel = new JPanel();
 frame.add(panel);
 JButton button = new JButton("Convert");
 panel.add(button);
 button.addActionListener(this);
-JTextField answer = new JTextField(20);
+
+
 frame.setVisible(true);
 panel.setVisible(true);
 panel.add(answer);
-
+frame.pack();
 }
+	JFrame frame = new JFrame("Bianary Converter");
+	JTextField answer = new JTextField(20);
 
 
 public void actionPerformed(ActionEvent e) {
-	
-	
+String text = answer.getText();
+text = convert(text);
+answer.setText(text);
+frame.pack();
 }
 String convert(String input) {
     if(input.length() != 8){
@@ -47,7 +53,5 @@ String convert(String input) {
         return "-";
     }
 }
-
-
 
 }
