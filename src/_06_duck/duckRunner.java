@@ -10,6 +10,16 @@ public static void main(String[] args) {
 	int numberOfFriends = Integer.parseInt(friends);
 	
 	
-duck bird = new duck(favorite);
+duck bird = new duck(favoriteFood,numberOfFriends);
+
+bird.printFriendCount();
+bird.quack();
+
+Dog rufus = new Dog("Rufus",4);
+
+
+rufus.printName();
+
+rufus.bark();
 }
 }
